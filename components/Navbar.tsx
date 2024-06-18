@@ -24,7 +24,12 @@ export const Navbar = () => {
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
                 <Link href="/">
                   <span className="flex items-center space-x-2 text-2xl font-medium text-orange-600 dark:text-gray-100">
-                    <span>PKRU</span>
+                    <img
+                      src="https://academic.pkru.ac.th/images/Annouce/Budget/2565/PKRU.png"
+                      alt="Description of the image"
+                      width={180}
+                      height={200}
+                    />
                   </span>
                 </Link>
 
