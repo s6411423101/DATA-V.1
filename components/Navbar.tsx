@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
-import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 
 export const Navbar = () => {
@@ -35,7 +34,7 @@ export const Navbar = () => {
 
                 <Disclosure.Button
                   aria-label="Toggle Menu"
-                  className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-orange-600 focus:text-orange-600 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
+                  className="px-2 py-1 mr-auto text-gray-500 rounded-md lg:hidden hover:text-orange-600 focus:text-orange-600 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
                 >
                   <svg
                     className="w-6 h-6 fill-current"
@@ -58,13 +57,13 @@ export const Navbar = () => {
                   </svg>
                 </Disclosure.Button>
 
-                <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
+                <Disclosure.Panel className=" absolute pt-28 top-0 right-0 flex flex-wrap w-full my-5 lg:hidden">
                   <>
                     {navigation.map((item, index) => (
                       <Link
                         key={index}
                         href="/"
-                        className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-orange-600 focus:text-orange-600 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
+                        className=" bg-trueGray-800  size-24 font-bold text-3xl  w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-orange-600 focus:text-orange-600 focus:outline-none"
                       >
                         {item}
                       </Link>
@@ -95,9 +94,9 @@ export const Navbar = () => {
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
           <Link
             href="/"
-            className="px-6 py-2 text-white bg-orange-600 rounded-md md:ml-5"
+            className="px-3 py-2 text-white bg-orange-600 rounded-md md:ml-5"
           >
-            Languages
+            English
           </Link>
 
           <ThemeChanger />

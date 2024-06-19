@@ -102,9 +102,10 @@ export function Footer() {
             </div>
           </div>
         </div>
-        {/* Social Links */}
-        {/* mt-8 flex justify-center lg:justify-start */}
-        <div className=" "></div>
+
+        <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
+          © Phuket Rajabhat University
+        </div>
       </Container>
     </div>
   );
