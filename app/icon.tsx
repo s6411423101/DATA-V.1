@@ -13,7 +13,7 @@ export default function Icon() {
       <div
         style={{
           fontSize: 24,
-          background: "black",
+          background: "white",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -22,7 +22,7 @@ export default function Icon() {
           color: "black",
         }}
       >
-        A
+        PK
       </div>
     ),
     { ...size }
