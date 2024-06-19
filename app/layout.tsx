@@ -4,7 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
-import { PopupWidget } from "@/components/PopupWidget";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -24,7 +23,6 @@ export default function RootLayout({
           <Navbar />
           <div>{children}</div>
           <Footer />
-          <PopupWidget />
         </ThemeProvider>
       </body>
     </html>
