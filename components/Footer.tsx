@@ -1,6 +1,6 @@
 import { Container } from "./Container";
 import Link from "next/link"; // Assuming 'Link' is from Next.js
-import Image from "next/image"; // Assuming 'Image' is from Next.js
+
 import React from "react";
 
 export function Footer() {
@@ -34,8 +34,45 @@ export function Footer() {
               </Link>
             </div>
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              21 ม.6 ถ.เทพกระษัตรี ต.รัษฎา อ.เมือง ภูเก็ต 83000 <br />
-              pr@pkru.ac.th
+              21 ม.6 ถ.เทพกระษัตรี <br />
+              ต.รัษฎา อ.เมือง ภูเก็ต 83000 <br />
+              Email :pr@pkru.ac.th
+            </div>
+            <div className="mt-4 flex justify-center lg:justify-start">
+              <div className="flex space-x-5 text-gray-400 dark:text-gray-500">
+                <a
+                  href="https://twitter.com/pkru"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="sr-only">Twitter</span>
+                  <Twitter />
+                </a>
+                <a
+                  href="https://facebook.com/pkru"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="sr-only">Facebook</span>
+                  <Facebook />
+                </a>
+                <a
+                  href="https://instagram.com/pkru"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="sr-only">Instagram</span>
+                  <Instagram />
+                </a>
+                <a
+                  href="https://linkedin.com/pkru"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="sr-only">Linkedin</span>
+                  <Linkedin />
+                </a>
+              </div>
             </div>
           </div>
           {/* Navigation Links */}
@@ -66,42 +103,8 @@ export function Footer() {
           </div>
         </div>
         {/* Social Links */}
-        <div className="mt-8 flex justify-center lg:justify-start">
-          <div className="flex space-x-5 text-gray-400 dark:text-gray-500">
-            <a
-              href="https://twitter.com/pkru"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="sr-only">Twitter</span>
-              <Twitter />
-            </a>
-            <a
-              href="https://facebook.com/pkru"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="sr-only">Facebook</span>
-              <Facebook />
-            </a>
-            <a
-              href="https://instagram.com/pkru"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="sr-only">Instagram</span>
-              <Instagram />
-            </a>
-            <a
-              href="https://linkedin.com/pkru"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="sr-only">Linkedin</span>
-              <Linkedin />
-            </a>
-          </div>
-        </div>
+        {/* mt-8 flex justify-center lg:justify-start */}
+        <div className=" "></div>
       </Container>
     </div>
   );
