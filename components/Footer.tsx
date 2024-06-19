@@ -34,12 +34,8 @@ export function Footer() {
               </Link>
             </div>
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              มหาวิทยาลัยราชภัฏภูเก็ต
-              เริ่มต้นจากการเป็นส่วนหนึ่งในสถาบันการศึกษาชั้นสูง (Higher
-              Education Institution) 3 แห่ง ที่จัดตั้งขึ้นในจังหวัดต่างๆ
-              ในภูมิภาค ในปี พ.ศ. 2515 โดยกรมการฝึกหัดครู กระทรวงศึกษาธิการ
-              เป็นผู้ริเริ่มผลักดันให้สถาปนาขึ้นที่จังหวัดภูเก็ต บุรีรัมย์
-              และลำปาง
+              21 ม.6 ถ.เทพกระษัตรี ต.รัษฎา อ.เมือง ภูเก็ต 83000 <br />
+              pr@pkru.ac.th
             </div>
           </div>
           {/* Navigation Links */}
@@ -56,7 +52,7 @@ export function Footer() {
               ))}
             </div>
             {/* Legal Links */}
-            <div className="mt-4 lg:mt-0">
+            <div className="flex flex-wrap w-full mt-0 -ml-3 lg:ml-0">
               {legal.map((item, index) => (
                 <Link
                   key={index}
@@ -97,7 +93,7 @@ export function Footer() {
               <Instagram />
             </a>
             <a
-              href="https://linkedin.com/"
+              href="https://linkedin.com/pkru"
               target="_blank"
               rel="noopener noreferrer"
             >
