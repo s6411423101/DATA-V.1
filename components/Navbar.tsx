@@ -63,7 +63,7 @@ export const Navbar = () => {
                       <Link
                         key={index}
                         href="/"
-                        className=" bg-trueGray-800  size-24 font-bold text-3xl  w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-orange-600 focus:text-orange-600 focus:outline-none"
+                        className=" bg-trueGray-800  size-24 font-extralight text-3xl  w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-orange-600 focus:text-orange-600 focus:outline-none"
                       >
                         {item}
                       </Link>
@@ -77,7 +77,7 @@ export const Navbar = () => {
 
         {/* menu  */}
         <div className="hidden text-center lg:flex lg:items-center">
-          <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
+          <ul className=" justify-center items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
                 <Link
