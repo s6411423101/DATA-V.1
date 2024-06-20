@@ -5,9 +5,9 @@ import React from "react";
 
 export function Footer() {
   const navigation = [
+    "Resources & Data",
     "About Us",
     "Our Focus",
-    "Resources & Data",
     "News",
     "Blog",
   ];
@@ -16,7 +16,7 @@ export function Footer() {
   return (
     <div className="relative">
       <Container>
-        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
+        <div className=" grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div>
               <Link
@@ -33,7 +33,7 @@ export function Footer() {
                 </span>
               </Link>
             </div>
-            <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
+            <div className="max-w-md mt-4 text-white dark:text-gray-400">
               21 ม.6 ถ.เทพกระษัตรี <br />
               ต.รัษฎา อ.เมือง ภูเก็ต 83000 <br />
               Email :pr@pkru.ac.th
@@ -76,20 +76,20 @@ export function Footer() {
             </div>
           </div>
           {/* Navigation Links */}
-          <div className="lg:col-span-3 grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <div className=" pt-1  lg:col-span-3 grid grid-cols-1 gap-4 lg:grid-cols-2">
             <div>
               {navigation.map((item, index) => (
                 <Link
                   key={index}
                   href="/"
-                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
+                  className="w-full px-4 py-2 hover:text-orange-600 focus:text-orange-600  focus:outline-none "
                 >
                   {item}
                 </Link>
               ))}
             </div>
             {/* Legal Links */}
-            <div className="flex flex-wrap w-full mt-0 -ml-3 lg:ml-0">
+            <div className="flex flpnex-wrap w-full mt-0 -ml-3 lg:ml-0">
               {legal.map((item, index) => (
                 <Link
                   key={index}
@@ -102,9 +102,9 @@ export function Footer() {
             </div>
           </div>
         </div>
-
-        <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          © Phuket Rajabhat University
+        <div className=" grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5"></div>
+        <div className="text-sm text-center text-gray-600 dark:text-gray-400">
+          Bachelor of Science Computer Science Phuket Rajabhat University
         </div>
       </Container>
     </div>

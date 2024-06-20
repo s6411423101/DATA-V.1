@@ -9,11 +9,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "PDB66",
   description: "PROJECT PKRU DATABASE",
-  // icons: {
-  // icon: ["/favicon.ico?v=4"],
-  // apple: ["/apple-toch-icon.ping?v=4"],
-  // shortcut: ["/apple-touch-icon.png"],
-  //   },
 };
 
 export default function RootLayout({
