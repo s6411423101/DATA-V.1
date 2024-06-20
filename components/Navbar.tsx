@@ -11,19 +11,6 @@ export const Navbar = () => {
     "News",
     "Blog",
   ];
-  const handleScroll = () => {
-    const nav = document.querySelector("nav");
-    if (nav) {
-      if (window.scrollY > 0) {
-        nav.classList.add("shadow-md");
-      } else {
-        nav.classList.remove("shadow-md");
-      }
-    }
-  };
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", handleScroll);
-  }
   return (
     <div className="w-full">
       <div className=" mx-auto">
