@@ -1,7 +1,6 @@
 "use client";
 import { Disclosure } from "@headlessui/react";
 import Link from "next/link";
-import ThemeChanger from "./DarkSwitch";
 import { useEffect, useState } from "react";
 
 export const Navbar = () => {
@@ -44,11 +43,11 @@ export const Navbar = () => {
       {/* Logo */}
       <Disclosure>
         {({ open }) => (
-          <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
+          <div className="flex flex-wrap items-center justify-around w-full lg:w-auto">
             {/* <Mobile> */}
             <Link href="/">
               <span
-                className={`flex-grow items-center space-x-2 text-2xl font-medium ${
+                className={` flex-grow items-center space-x-2 text-2xl font-medium ${
                   isScrollingDown ? "text-orange-600" : "text-white"
                 }`}
               >
@@ -132,7 +131,6 @@ export const Navbar = () => {
         >
           Your Language
         </Link>
-        <ThemeChanger />
       </div>
     </nav>
   );

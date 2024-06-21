@@ -19,18 +19,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider attribute="class">
-          <div
-            className="sticky
+        <div
+          className="sticky
          top-0 z-10"
-          >
-            <Navbar />
-          </div>
-          <div>{children}</div>
-          <div className="bg-cyan-900">
-            <Footer />
-          </div>
-        </ThemeProvider>
+        >
+          <Navbar />
+        </div>
+        <div>{children}</div>
+        {/* <div className="bg-cyan-900"> */}
+        <Footer />
+        {/* </div> */}
       </body>
     </html>
   );
