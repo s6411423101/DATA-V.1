@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import backgroundImg from "@/public/pk1.jpg";
+import backgroundImg from "@/public/pk4.jpg";
 const Home: React.FC = () => {
   return (
     <div className="h-screen flex items-center justify-center">

@@ -3,14 +3,19 @@ import { Disclosure } from "@headlessui/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+type NavigationItem = {
+  name: string;
+  href: string;
+};
+
 export const Navbar = () => {
-  const navigation = [
-    "Dashbord",
-    "About Us",
-    "Our Focus",
-    "Resources & Data",
-    "News",
-    "Blog",
+  const navigation: NavigationItem[] = [
+    { name: "Dashboard", href: "/dashboard" },
+    { name: "About Us", href: "/about-us" },
+    { name: "Our Focus", href: "/our-focus" },
+    { name: "Resources & Data", href: "/resources-and-data" },
+    { name: "News", href: "/news" },
+    { name: "Blog", href: "/blog" },
   ];
 
   const [isScrollingDown, setIsScrollingDown] = useState(false);
@@ -89,12 +94,12 @@ export const Navbar = () => {
               {navigation.map((item, index) => (
                 <Link
                   key={index}
-                  href="/"
+                  href={item.href}
                   className={`size-24 font-extralight text-3xl w-full px-4 py-2 -ml-4 rounded-md hover:text-orange-600 focus:text-orange-600 focus:outline-none ${
                     isScrollingDown ? "text-gray-600" : "text-white"
                   }`}
                 >
-                  {item}
+                  {item.name}
                 </Link>
               ))}
             </Disclosure.Panel>
@@ -104,16 +109,17 @@ export const Navbar = () => {
 
       {/* Menu */}
       <div className="hidden text-center lg:flex lg:items-center">
-        <ul className="justify-center items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
-          {navigation.map((menu, index) => (
+        {/* justify-center items-center flex-1 pt-6 list-none lg:pt-0 lg:flex */}
+        <ul className="justify-center items-center flex-1 pt-6 list-none lg:pt-0 lg:flex">
+          {navigation.map((item, index) => (
             <li className="mr-3 nav__item" key={index}>
               <Link
-                href="/"
+                href={item.href}
                 className={`inline-block px-4 py-2 text-lg font-normal no-underline rounded-md hover:text-orange-600 focus:text-orange-600 ${
                   isScrollingDown ? "text-gray-600" : "text-white"
                 }`}
               >
-                {menu}
+                {item.name}
               </Link>
             </li>
           ))}
