@@ -1,11 +1,16 @@
 import React from "react";
-
+import Image from "next/image";
+import backgroundImg from "@/public/pk1.jpg";
 const Home: React.FC = () => {
   return (
-    <div className="h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-5xl font-bold text-center text-gray-800">
-        Welcome Phuket Dashboard
-      </h1>
+    <div className="h-screen flex items-center justify-center">
+      <Image
+        src={backgroundImg}
+        alt="Background Image"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+      />
     </div>
   );
 };

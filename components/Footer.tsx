@@ -27,7 +27,7 @@ export function Footer() {
                   <img
                     src="https://academic.pkru.ac.th/images/Annouce/Budget/2565/PKRU.png"
                     alt="Description of the image"
-                    width={180}
+                    width={150}
                     height={200}
                   />
                 </span>

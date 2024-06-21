@@ -39,7 +39,7 @@ export const Navbar = () => {
         isScrollingDown
           ? "bg-white text-gray-600"
           : "bg-opacity-30 backdrop-blur-lg text-white"
-      } transition-all duration-300 ease-in-out backdrop-filter border-b border-gray-200 mx-auto top-0 sticky flex flex-wrap items-center justify-between p-8 lg:px-0`}
+      } transition-all duration-300 ease-in-out backdrop-filter border-b border-gray-200 mx-auto top-0 sticky flex flex-wrap items-center justify-between p-9 lg:px-20`}
     >
       {/* Logo */}
       <Disclosure>
@@ -48,15 +48,15 @@ export const Navbar = () => {
             {/* <Mobile> */}
             <Link href="/">
               <span
-                className={` flex-grow items-center space-x-2 text-2xl font-medium ${
+                className={`grid flex-grow items-center space-x-2 text-2xl font-medium ${
                   isScrollingDown ? "text-orange-600" : "text-white"
                 }`}
               >
                 <img
                   src="https://academic.pkru.ac.th/images/Annouce/Budget/2565/PKRU.png"
                   alt="PKRU Logo"
-                  width={180}
-                  height={200}
+                  width={100}
+                  height={150}
                 />
               </span>
             </Link>
@@ -124,13 +124,11 @@ export const Navbar = () => {
       <div className="hidden mr-3 space-x-4 lg:flex nav__item">
         <Link
           href="/"
-          className={`px-3 py-2 rounded-md md:ml-5 ${
-            isScrollingDown
-              ? "bg-orange-600 text-white"
-              : "bg-white text-orange-600"
+          className={`px-2 py-1 rounded-md md:ml-5 ${
+            isScrollingDown ? " text-gray-600" : " text-white"
           }`}
         >
-          Your Language
+          EN
         </Link>
       </div>
     </nav>
