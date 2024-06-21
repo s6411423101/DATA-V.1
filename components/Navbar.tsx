@@ -35,9 +35,11 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`bg-white backdrop-filter backdrop-blur-lg border-b border-gray-200 bg-opacity-30 mx-auto top-0 bg-w relative flex flex-wrap items-center justify-between p-8 lg:px-0 ${
-        isScrollingDown ? "sticky" : "hidden"
-      }`}
+      className={`${
+        isScrollingDown
+          ? "bg-white text-gray-600"
+          : "bg-opacity-30 backdrop-blur-lg text-white"
+      } transition-all duration-300 ease-in-out backdrop-filter border-b border-gray-200 mx-auto top-0 sticky flex flex-wrap items-center justify-between p-8 lg:px-0`}
     >
       {/* Logo */}
       <Disclosure>
@@ -45,7 +47,11 @@ export const Navbar = () => {
           <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
             {/* <Mobile> */}
             <Link href="/">
-              <span className="flex-grow items-center space-x-2 text-2xl font-medium text-orange-600 dark:text-gray-100">
+              <span
+                className={`flex-grow items-center space-x-2 text-2xl font-medium ${
+                  isScrollingDown ? "text-orange-600" : "text-white"
+                }`}
+              >
                 <img
                   src="https://academic.pkru.ac.th/images/Annouce/Budget/2565/PKRU.png"
                   alt="PKRU Logo"
@@ -84,7 +90,9 @@ export const Navbar = () => {
                 <Link
                   key={index}
                   href="/"
-                  className="size-24 font-extralight text-3xl w-full px-4 py-2 -ml-4 rounded-md dark:text-gray-300 hover:text-orange-600 focus:text-orange-600 focus:outline-none"
+                  className={`size-24 font-extralight text-3xl w-full px-4 py-2 -ml-4 rounded-md hover:text-orange-600 focus:text-orange-600 focus:outline-none ${
+                    isScrollingDown ? "text-gray-600" : "text-white"
+                  }`}
                 >
                   {item}
                 </Link>
@@ -101,7 +109,9 @@ export const Navbar = () => {
             <li className="mr-3 nav__item" key={index}>
               <Link
                 href="/"
-                className="inline-block px-4 py-2 text-lg font-normalno-underline rounded-md hover:text-orange-600 focus:text-orange-600"
+                className={`inline-block px-4 py-2 text-lg font-normal no-underline rounded-md hover:text-orange-600 focus:text-orange-600 ${
+                  isScrollingDown ? "text-gray-600" : "text-white"
+                }`}
               >
                 {menu}
               </Link>
@@ -114,7 +124,11 @@ export const Navbar = () => {
       <div className="hidden mr-3 space-x-4 lg:flex nav__item">
         <Link
           href="/"
-          className="px-3 py-2 text-white bg-orange-600 rounded-md md:ml-5"
+          className={`px-3 py-2 rounded-md md:ml-5 ${
+            isScrollingDown
+              ? "bg-orange-600 text-white"
+              : "bg-white text-orange-600"
+          }`}
         >
           Your Language
         </Link>

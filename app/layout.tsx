@@ -27,7 +27,9 @@ export default function RootLayout({
             <Navbar />
           </div>
           <div>{children}</div>
-          <Footer />
+          <div className="bg-cyan-900">
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
