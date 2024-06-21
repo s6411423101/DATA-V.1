@@ -20,7 +20,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class">
-          <Navbar />
+          <div
+            className="sticky
+         top-0 z-10"
+          >
+            <Navbar />
+          </div>
           <div>{children}</div>
           <Footer />
         </ThemeProvider>
