@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 export const Navbar = () => {
   const navigation = [
+    "Dashbord",
     "About Us",
     "Our Focus",
     "Resources & Data",
