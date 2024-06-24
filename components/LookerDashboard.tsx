@@ -17,7 +17,7 @@ const LookerDashboard: React.FC<LookerDashboardProps> = ({ className }) => {
           height: "100%",
           border: "none",
         }}
-        src="https://lookerstudio.google.com/embed/reporting/f1837c75-6dd4-4355-9966-ca1785d14302/page/4OrWB"
+        src="https://lookerstudio.google.com/embed/reporting/d3fcf77a-2aac-4cb8-bcaa-606ed68ca89e/page/5Y23D"
       ></iframe>
     </div>
   );

@@ -18,17 +18,19 @@ export const Navbar = () => {
     { name: "Blog", href: "/blog" },
   ];
 
-  const [isScrollingDown, setIsScrollingDown] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollTop = window.pageYOffset;
 
-      if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
-        setIsScrollingDown(true);
-      } else {
-        setIsScrollingDown(false);
+      if (currentScrollTop > lastScrollTop && !isScrolled) {
+        // scrolling down
+        setIsScrolled(true);
+      } else if (currentScrollTop < lastScrollTop && isScrolled) {
+        // scrolling up
+        setIsScrolled(false);
       }
 
       setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
@@ -36,27 +38,21 @@ export const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollTop]);
+  }, [isScrolled, lastScrollTop]);
+
+  const navbarClasses = `transition-all duration-300 ease-in-out ${
+    isScrolled ? "-translate-y-20 opacity-0" : "translate-y-0 opacity-100"
+  }`;
 
   return (
     <nav
-      className={`${
-        isScrollingDown
-          ? "bg-white text-gray-600"
-          : "bg-opacity-30 backdrop-blur-lg text-white"
-      } transition-all duration-300 ease-in-out backdrop-filter border-b border-gray-200 mx-auto top-0 sticky flex flex-wrap items-center justify-between p-9 lg:px-20`}
+      className={`bg-opacity-30 backdrop-blur-lg text-white border-b border-gray-200 mx-auto top-0 sticky flex flex-wrap items-center justify-between p-9 lg:px-20 ${navbarClasses}`}
     >
-      {/* Logo */}
       <Disclosure>
         {({ open }) => (
           <div className="flex flex-wrap items-center justify-around w-full lg:w-auto">
-            {/* <Mobile> */}
             <Link href="/">
-              <span
-                className={`grid flex-grow items-center space-x-2 text-2xl font-medium ${
-                  isScrollingDown ? "text-orange-600" : "text-white"
-                }`}
-              >
+              <span className="grid flex-grow items-center space-x-2 text-2xl font-medium">
                 <img
                   src="https://academic.pkru.ac.th/images/Annouce/Budget/2565/PKRU.png"
                   alt="PKRU Logo"
@@ -95,9 +91,7 @@ export const Navbar = () => {
                 <Link
                   key={index}
                   href={item.href}
-                  className={`size-24 font-extralight text-3xl w-full px-4 py-2 -ml-4 rounded-md hover:text-orange-600 focus:text-orange-600 focus:outline-none ${
-                    isScrollingDown ? "text-gray-600" : "text-white"
-                  }`}
+                  className="size-24 font-extralight text-3xl w-full px-4 py-2 -ml-4 rounded-md hover:text-orange-600 focus:text-orange-600 focus:outline-none"
                 >
                   {item.name}
                 </Link>
@@ -107,17 +101,13 @@ export const Navbar = () => {
         )}
       </Disclosure>
 
-      {/* Menu */}
       <div className="hidden text-center lg:flex lg:items-center">
-        {/* justify-center items-center flex-1 pt-6 list-none lg:pt-0 lg:flex */}
         <ul className="justify-center items-center flex-1 pt-6 list-none lg:pt-0 lg:flex">
           {navigation.map((item, index) => (
             <li className="mr-3 nav__item" key={index}>
               <Link
                 href={item.href}
-                className={`inline-block px-4 py-2 text-lg font-normal no-underline rounded-md hover:text-orange-600 focus:text-orange-600 ${
-                  isScrollingDown ? "text-gray-600" : "text-white"
-                }`}
+                className={`inline-block px-4 py-2 text-lg font-normal no-underline rounded-md hover:text-orange-600 focus:text-orange-600`}
               >
                 {item.name}
               </Link>
@@ -126,14 +116,8 @@ export const Navbar = () => {
         </ul>
       </div>
 
-      {/* Additional Links */}
       <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-        <Link
-          href="/"
-          className={`px-2 py-1 rounded-md md:ml-5 ${
-            isScrollingDown ? " text-gray-600" : " text-white"
-          }`}
-        >
+        <Link href="/" className="px-2 py-1 rounded-md">
           EN
         </Link>
       </div>
