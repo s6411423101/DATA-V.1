@@ -16,6 +16,9 @@
   "author": "Surjith S M",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-common-types": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^2.1.4",
     "next": "14.2.4",
