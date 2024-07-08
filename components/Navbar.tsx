@@ -46,7 +46,7 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`bg-opacity-30 backdrop-blur-lg text-white border-b border-gray-200 mx-auto top-0 sticky flex flex-wrap items-center justify-between p-9 lg:px-20 ${navbarClasses}`}
+      className={`bg-white border-gray-200 mx-auto top-0 sticky flex flex-wrap items-center justify-between p-7 lg:px-20 ${navbarClasses}`}
     >
       <Disclosure>
         {({ open }) => (
